@@ -71,13 +71,3 @@ Run all the tests with the following command:
 
 ```bash
 flutter test
-
-
-
-   
-
-
-
-
-
-
