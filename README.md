@@ -33,9 +33,51 @@ Ensure you have the following installed:
 2. Navigate to the project directory:
    ```bash
    cd flutter_weather_app
-3.Install the required dependencies:
+3. Install the required dependencies:
    ```bash
    flutter pub get
-4.Run the app on an emulator or device:
+4. Run the app on an emulator or device:
    ```bash
    flutter run
+
+### Project Structure
+
+The app follows the **Clean Architecture** pattern with the following layers:
+
+- **Domain Layer**: Contains business logic, entities, use cases, and repositories' contracts (interfaces).
+- **Data Layer**: Handles data sources (e.g., API, local storage) and models. This layer implements the repository interface from the domain layer.
+- **Presentation Layer**: UI code using Flutter widgets, state management with BLoC, and user interaction logic.
+
+
+### State Management
+
+The app uses **BLoC** (Business Logic Component) for state management in the presentation layer. Each feature (such as weather display) is handled by a separate BLoC class, which manages the state and interactions between the UI and the domain layer.
+
+- The BLoC listens for events triggered by user interaction.
+- It communicates with the domain layer (use cases and repositories) to fetch or manipulate data.
+- The state is emitted back to the UI, which rebuilds itself based on the latest state.
+
+### Testing
+
+The app follows the **Test-Driven Development (TDD)** approach. Each feature is first written as a test, followed by the actual implementation. This ensures that the app is reliable and maintainable.
+
+Types of tests included:
+
+- **Unit Tests**: Test individual classes, use cases, and logic in isolation (e.g., testing the weather use case).
+- **Widget Tests**: Test the UI and its interaction with the state (e.g., testing the weather display widget).
+- **Integration Tests**: Test the entire flow of the app, from user input to data fetching and displaying the result.
+
+Run all the tests with the following command:
+
+```bash
+flutter test
+
+
+
+   
+
+
+
+
+
+
