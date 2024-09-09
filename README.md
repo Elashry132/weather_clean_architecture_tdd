@@ -30,3 +30,12 @@ Ensure you have the following installed:
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/flutter_weather_app.git
+2. Navigate to the project directory:
+   ```bash
+   cd flutter_weather_app
+3.Install the required dependencies:
+   ```bash
+   flutter pub get
+4.Run the app on an emulator or device:
+   ```bash
+   flutter run
